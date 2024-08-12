@@ -4,36 +4,49 @@
     "type": "split",
     "children": [
       {
-        "id": "ffdf29bc987df860",
-        "type": "tabs",
+        "id": "747c45920080e399",
+        "type": "split",
         "children": [
           {
-            "id": "ab02cae8ff0762de",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Welcome.md",
-                "mode": "source",
-                "source": false
+            "id": "ffdf29bc987df860",
+            "type": "tabs",
+            "dimension": 50,
+            "children": [
+              {
+                "id": "3df09320b9c7fd3d",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Filters/1 Lista.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
               }
-            }
-          }
-        ]
-      },
-      {
-        "id": "50c83ccda8c21021",
-        "type": "tabs",
-        "children": [
+            ]
+          },
           {
-            "id": "2e526222a818505a",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
+            "id": "651debc6ca748f85",
+            "type": "tabs",
+            "dimension": 50,
+            "children": [
+              {
+                "id": "2e526222a818505a",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Welcome.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -99,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Welcome.md",
+                "file": "Filters/1 Lista.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Welcome.md",
+                "file": "Filters/1 Lista.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Welcome.md"
+                "file": "Filters/1 Lista.md"
               }
             }
           }
@@ -160,8 +173,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2e526222a818505a",
+  "active": "3df09320b9c7fd3d",
   "lastOpenFiles": [
-    "Welcome.md"
+    "Filters/is_main_query.md",
+    "Filters/1 Lista.md",
+    "Plugins Development/PHP Plugins.md",
+    "Filters",
+    "Welcome.md",
+    "Plugins Development"
   ]
 }
