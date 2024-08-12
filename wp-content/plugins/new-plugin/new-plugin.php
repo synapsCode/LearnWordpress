@@ -8,13 +8,28 @@
  * AuthorL Wad
  */
 
-add_filter('the_content', 'addToEndOfPosts');
 
-function  addToEndOfPosts($content)
-{
-    if(is_single() && is_main_query()){
-        return $content . "<h2>wad jest the best</h2>";
+class WordCounterPlugin {
+
+    // ta metoda odpala się w momęcie tworzenie instancji
+    function __construct(){
+        add_action('admin_menu', array($this, 'adminPage'));
     }
 
+
+    function adminPage(){
+        add_options_page("Word Count Plugin", "Word count", "manage_options", "word-count-settings-page", array($this, 'outSettingsPageHtml'));
+    }
+    
+    /**
+     * To jest nasza funckcja co wyświetla html w admin panelu. 
+     * Narazie z admin panelu
+     */
+    function outSettingsPageHtml(){
+        ?>
+            To jest nasz plugin
+        <?php
+    }
 }
 
+new WordCounterPlugin();

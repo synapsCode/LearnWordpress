@@ -27,23 +27,48 @@
             ]
           },
           {
-            "id": "651debc6ca748f85",
-            "type": "tabs",
+            "id": "30b37752831a93be",
+            "type": "split",
             "dimension": 50,
             "children": [
               {
-                "id": "2e526222a818505a",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Welcome.md",
-                    "mode": "source",
-                    "source": false
+                "id": "651debc6ca748f85",
+                "type": "tabs",
+                "children": [
+                  {
+                    "id": "2e526222a818505a",
+                    "type": "leaf",
+                    "state": {
+                      "type": "markdown",
+                      "state": {
+                        "file": "Welcome.md",
+                        "mode": "source",
+                        "source": false
+                      }
+                    }
                   }
-                }
+                ]
+              },
+              {
+                "id": "7031de237d10a903",
+                "type": "tabs",
+                "children": [
+                  {
+                    "id": "eb3ea1dafaad0f36",
+                    "type": "leaf",
+                    "state": {
+                      "type": "markdown",
+                      "state": {
+                        "file": "Plugins Development/PHP Plugins.md",
+                        "mode": "source",
+                        "source": false
+                      }
+                    }
+                  }
+                ]
               }
-            ]
+            ],
+            "direction": "vertical"
           }
         ],
         "direction": "horizontal"
@@ -175,11 +200,11 @@
   },
   "active": "3df09320b9c7fd3d",
   "lastOpenFiles": [
-    "Filters/is_main_query.md",
-    "Filters/1 Lista.md",
     "Plugins Development/PHP Plugins.md",
-    "Filters",
     "Welcome.md",
+    "Filters/1 Lista.md",
+    "Filters/is_main_query.md",
+    "Filters",
     "Plugins Development"
   ]
 }
