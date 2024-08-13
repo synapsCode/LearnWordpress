@@ -4,74 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "747c45920080e399",
-        "type": "split",
+        "id": "ffdf29bc987df860",
+        "type": "tabs",
         "children": [
           {
-            "id": "ffdf29bc987df860",
-            "type": "tabs",
-            "dimension": 50,
-            "children": [
-              {
-                "id": "3df09320b9c7fd3d",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Filters/1 Lista.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
+            "id": "3df09320b9c7fd3d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Welcome.md",
+                "mode": "source",
+                "source": false
               }
-            ]
-          },
-          {
-            "id": "30b37752831a93be",
-            "type": "split",
-            "dimension": 50,
-            "children": [
-              {
-                "id": "651debc6ca748f85",
-                "type": "tabs",
-                "children": [
-                  {
-                    "id": "2e526222a818505a",
-                    "type": "leaf",
-                    "state": {
-                      "type": "markdown",
-                      "state": {
-                        "file": "Welcome.md",
-                        "mode": "source",
-                        "source": false
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "id": "7031de237d10a903",
-                "type": "tabs",
-                "children": [
-                  {
-                    "id": "eb3ea1dafaad0f36",
-                    "type": "leaf",
-                    "state": {
-                      "type": "markdown",
-                      "state": {
-                        "file": "Plugins Development/PHP Plugins.md",
-                        "mode": "source",
-                        "source": false
-                      }
-                    }
-                  }
-                ]
-              }
-            ],
-            "direction": "vertical"
+            }
           }
-        ],
-        "direction": "horizontal"
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "add_settings_field",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -117,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -137,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Filters/1 Lista.md",
+                "file": "Welcome.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Filters/1 Lista.md",
+                "file": "Welcome.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -177,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Filters/1 Lista.md"
+                "file": "Welcome.md"
               }
             }
           }
@@ -200,9 +149,15 @@
   },
   "active": "3df09320b9c7fd3d",
   "lastOpenFiles": [
-    "Plugins Development/PHP Plugins.md",
-    "Welcome.md",
+    "Metody/add_secttings_field.md",
     "Filters/1 Lista.md",
+    "Metody/register_setting.md",
+    "Welcome.md",
+    "Plugins Development/PHP Plugins.md",
+    "Metody/settings_fields().md",
+    "Untitled.canvas",
+    "Untitled 1.canvas",
+    "Metody",
     "Filters/is_main_query.md",
     "Filters",
     "Plugins Development"

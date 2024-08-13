@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiFunctionSquare",
       "LiListTree",
       "LiFilter",
       "LiPlug",
-      "LiHome",
-      "LiPlugZap"
+      "LiHome"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -43,5 +43,9 @@
     "iconColor": "#151df9"
   },
   "Filters": "LiFilter",
-  "Filters/1 Lista.md": "LiListTree"
+  "Filters/1 Lista.md": "LiListTree",
+  "Metody": {
+    "iconName": "LiFunctionSquare",
+    "iconColor": "#dd1d1d"
+  }
 }
