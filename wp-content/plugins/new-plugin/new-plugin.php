@@ -30,9 +30,17 @@ class WordCounterPlugin {
         add_settings_field( 'word_count_headline', 'Heading section', array($this, 'headLineHtml'), 'word-count-settings-page', 'wpc_first_section' );
         register_setting('wordcountplugin', 'word_count_headline', array('sanitize_callback' => 'sanitize_text_field', 'default' => 'Post Statistics'));
 
-        add_settings_field('word_count_info', 'Info sectin', array($this, 'infoHtml'), 'word-count-settings-page', 'wpc_first_section');
-        register_setting('wordcountplugin', 'word_count_info', array('sanitize_callback' => 'sanitize_text_field', 'default' => 'Some information'));
+        //To nasze ile jest slow w naszym blog poscie
+        add_settings_field('word_count_info', 'Info section', array($this, 'infoHtml'), 'word-count-settings-page', 'wpc_first_section');
+        register_setting('wordcountplugin', 'word_count_info', array('sanitize_callback' => 'sanitize_text_field', 'default' => '1'));
 
+        //Charakter couinter
+        add_settings_field('character_count_info', 'Character count info', array($this, 'characterCoutInfo'), 'word-count-settings-page', 'wpc_first_section' );
+        register_setting('wordcountplugin', 'character_count_info', array('sanitize_callback' => 'sanitize_text_field', 'default' => '1'));
+
+        //Read time
+        add_settings_field('read_time', 'Read time info', array($this, 'readTimeHtml'), 'word-count-settings-page', 'wpc_first_section' );
+        register_setting('wordcountplugin', 'read_time', array('sanitize_callback' => 'sanitize_text_field', 'default' => '1'));
     }
     function locationHtml() { ?>
         <select name="word_count">
@@ -66,8 +74,17 @@ class WordCounterPlugin {
 
     function infoHtml(){
         ?>
-            <h2>To jest informacja o poście</h2>
-            <input type="text" value="<?php echo esc_attr(get_option('word_count_info'))   ?>" name="word_count_info"/>
+            <input type="checkbox" value="1" name="word_count_info" <?php checked(get_option('word_count_info'), '1') ?> />
+        <?php
+    }
+    function characterCoutInfo(){
+        ?>
+            <input type="checkbox" value="1" name="character_count_info" <?php checked(get_option('character_count_info'), '1') ?> />
+        <?php
+    }
+    function readTimeHtml(){
+        ?>
+            <input type="checkbox" value="1" name="read_time" id="read_time" <?php checked(get_option('read_time'), '1') ?> />
         <?php
     }
 }
