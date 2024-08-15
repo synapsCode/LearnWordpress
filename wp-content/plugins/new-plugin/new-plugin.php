@@ -15,11 +15,35 @@ class WordCounterPlugin {
     function __construct() {
         add_action('admin_menu', array($this, 'adminPage'));
         add_action('admin_init', array($this, 'settings'));
-      }
+        add_filter('the_content', array($this, 'ifWrap'));
+    }
+
+
+
+    function ifWrap($content){
+        if((is_main_query() AND is_single()) AND (get_option('word_count_info', '1') OR get_option('character_count_info', '1') OR get_option('read_time', '1'))){
+            return $this->createHTML($content);
+        }
+
+    }
+
+    function createHTML($content){
+            //Policz słowa w naszej apce
+        $starTime = microtime(true);
+        $count_word = str_word_count(strip_tags($content));
+        $endTime = microtime(true);
+        $html = '<h3>'. get_option('word_count_headline', 'Post statystics: ') . '</h3><p>' . $count_word . ($starTime - $endTime);
+                // W zależności od ustawień modyfikujemy ustawinei od początku lub końca
+        if(get_option('word_count', '0') == '0'){
+            return $html . $content . 'to jest mirek';
+        }
+        return $content .  $html;
+    }
 
     function adminPage(){
         add_options_page("Word Count Plugin", "Word count", "manage_options", "word-count-settings-page", array($this, 'ourHtml'));
-    }   
+    }
+
     function settings(){
         add_settings_section('wpc_first_section', null , null , 'word-count-settings-page');
         // Word count location
