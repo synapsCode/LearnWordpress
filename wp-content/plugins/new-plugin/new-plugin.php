@@ -6,12 +6,15 @@
  * Description: Bardzo fajny plugin
  * Version: 1.0
  * AuthorL Wad
+ * Text Domain: word_count_domain
+ * Domain Path: /languages
  */
 
 
 class WordCounterPlugin {
 
     // ta metoda odpala się w momęcie tworzenie instancji
+    
     function __construct() {
         add_action('admin_menu', array($this, 'adminPage'));
         add_action('admin_init', array($this, 'settings'));
@@ -35,7 +38,7 @@ class WordCounterPlugin {
         }
 
         if(get_option('word_count_info', '1')){
-            $statistics_info = '<strong> Liczba słów: ' . $count_word . '</strong>';
+            $statistics_info = '<strong>'.  __('Liczba słów:', 'word_count_domain') . ': ' . $count_word . '</strong>';
         }
 
         if(get_option('read_time' , '1')){
@@ -72,7 +75,7 @@ class WordCounterPlugin {
     }
 
     function adminPage(){
-        add_options_page("Word Count Plugin", "Word count", "manage_options", "word-count-settings-page", array($this, 'ourHtml'));
+        add_options_page("Word Count Plugin", __("Word count", 'word_count_domain'), "manage_options", "word-count-settings-page", array($this, 'ourHtml'));
     }
 
     function settings(){
@@ -97,7 +100,6 @@ class WordCounterPlugin {
         add_settings_field('read_time', 'Read time info', array($this, 'checkBOX'), 'word-count-settings-page', 'wpc_first_section', array('theName' => 'read_time' ) );
         register_setting('wordcountplugin', 'read_time', array('sanitize_callback' => 'sanitize_text_field', 'default' => '1'));
     }
-
 
     // Sprawdzanie naszych danych
     function sanitizenLocation($input){
