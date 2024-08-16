@@ -14,7 +14,6 @@
 class WordCounterPlugin {
 
     // ta metoda odpala się w momęcie tworzenie instancji
-    
     function __construct() {
         add_action('admin_menu', array($this, 'adminPage'));
         add_action('admin_init', array($this, 'settings'));
